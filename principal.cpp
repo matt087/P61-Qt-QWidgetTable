@@ -59,7 +59,8 @@ void Principal::on_btnGuardar_clicked()
     }
     // Abrir el archivo y guardar
     QFile archivo(ARCHIVO);
-    if (archivo.open(QFile::WriteOnly | QFile::Truncate)) {
+    if (archivo.open(QFile::WriteOnly | QFile::Truncate))
+    {
         QTextStream salida(&archivo);
         for (int i=0; i<filas; i++) {
             QTableWidgetItem *nombre = ui->tblLista->item(i, NOMBRE);

@@ -1,4 +1,4 @@
-#ifndef PERSONA_H
+    #ifndef PERSONA_H
 #define PERSONA_H
 
 #include <QObject>

@@ -16,7 +16,9 @@ class PersonaDialog : public QDialog
 public:
     explicit PersonaDialog(QWidget *parent = nullptr);
     ~PersonaDialog();
+
     Persona *persona() const;
+
 private slots:
     void on_buttonBox_accepted();
 
