@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Recursos/agenda-de-contactos.png</file>
+    </qresource>
+</RCC>

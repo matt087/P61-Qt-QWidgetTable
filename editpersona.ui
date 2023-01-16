@@ -28,6 +28,9 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(131, 3, 143);</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <spacer name="verticalSpacer_2">
@@ -59,6 +62,15 @@
      </item>
      <item>
       <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <family>Segoe UI Black</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(56, 1, 63);</string>
+       </property>
        <property name="text">
         <string>Editar Información</string>
        </property>
@@ -104,43 +116,84 @@
       <layout class="QFormLayout" name="formLayout">
        <item row="0" column="0">
         <widget class="QLabel" name="label_2">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(56, 1, 63);</string>
+         </property>
          <property name="text">
           <string>Nombre:</string>
          </property>
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="nombre"/>
+        <widget class="QLineEdit" name="nombre">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(181, 88, 204);
+border-color: rgb(181, 88, 204);</string>
+         </property>
+        </widget>
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label_4">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(56, 1, 63);</string>
+         </property>
          <property name="text">
           <string>Apellido:</string>
          </property>
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="apellido"/>
+        <widget class="QLineEdit" name="apellido">
+         <property name="focusPolicy">
+          <enum>Qt::StrongFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(181, 88, 204);
+border-color: rgb(181, 88, 204);</string>
+         </property>
+        </widget>
        </item>
        <item row="2" column="0">
         <widget class="QLabel" name="label_5">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(56, 1, 63);</string>
+         </property>
          <property name="text">
           <string>Teléfono:</string>
          </property>
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QLineEdit" name="telefono"/>
+        <widget class="QLineEdit" name="telefono">
+         <property name="focusPolicy">
+          <enum>Qt::StrongFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(181, 88, 204);
+border-color: rgb(181, 88, 204);</string>
+         </property>
+        </widget>
        </item>
        <item row="3" column="0">
         <widget class="QLabel" name="label_3">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(56, 1, 63);</string>
+         </property>
          <property name="text">
           <string>Email:</string>
          </property>
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QLineEdit" name="email"/>
+        <widget class="QLineEdit" name="email">
+         <property name="focusPolicy">
+          <enum>Qt::StrongFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(181, 88, 204);
+border-color: rgb(181, 88, 204);</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -179,6 +232,12 @@
      </item>
      <item>
       <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(56, 1, 63);</string>
+       </property>
        <property name="standardButtons">
         <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
        </property>
