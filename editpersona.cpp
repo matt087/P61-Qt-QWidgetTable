@@ -1,25 +1,29 @@
-#include "personadialog.h"
-#include "ui_personadialog.h"
+#include "editpersona.h"
+#include "ui_editpersona.h"
 
-PersonaDialog::PersonaDialog(QWidget *parent) :
+editpersona::editpersona(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::PersonaDialog)
+    ui(new Ui::editpersona)
 {
     ui->setupUi(this);
 }
 
-PersonaDialog::~PersonaDialog()
+editpersona::~editpersona()
 {
     delete ui;
 }
 
-void PersonaDialog::on_buttonBox_accepted()
+Persona *editpersona::persona() const
 {
-    QString nombre = ui->inNombre->text();
-    QString apellido = ui->inApellido->text();
-    QString telefono = ui->inTelefono->text();
-    QString email = ui->inEmail->text();
+    return m_persona;
+}
 
+void editpersona::on_buttonBox_accepted()
+{
+    QString nombre = ui->nombre->text();
+    QString apellido = ui->apellido->text();
+    QString telefono = ui->telefono->text();
+    QString email = ui->email->text();
     bool valid=false;
 
     QMessageBox adv;
@@ -84,15 +88,13 @@ void PersonaDialog::on_buttonBox_accepted()
     }
 
     this->m_persona = new Persona(nombre, apellido, telefono, email);
+
     accept();
 }
 
-void PersonaDialog::on_buttonBox_rejected()
+
+void editpersona::on_buttonBox_rejected()
 {
     reject();
 }
 
-Persona *PersonaDialog::persona() const
-{
-    return m_persona;
-}

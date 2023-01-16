@@ -7,6 +7,7 @@
 
 #include "personadialog.h"
 #include "persona.h"
+#include "editpersona.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Principal; }
@@ -25,7 +26,7 @@ private slots:
 
     void on_btnGuardar_clicked();
 
-    void on_btnEditar_clicked();
+    void on_tblLista_cellClicked(int row);
 
 private:
     Ui::Principal *ui;

@@ -17,7 +17,7 @@ public:
     explicit PersonaDialog(QWidget *parent = nullptr);
     ~PersonaDialog();
 
-    Persona *persona() const;
+    virtual Persona *persona() const;
 
 private slots:
     void on_buttonBox_accepted();
@@ -27,6 +27,7 @@ private slots:
 private:
     Ui::PersonaDialog *ui;
     Persona *m_persona;
+
 };
 
 #endif // PERSONADIALOG_H

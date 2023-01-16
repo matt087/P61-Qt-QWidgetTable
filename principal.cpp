@@ -78,10 +78,6 @@ void Principal::on_btnGuardar_clicked()
 
 }
 
-void Principal::on_btnEditar_clicked()
-{
-
-}
 
 void Principal::cargarContactos()
 {
@@ -108,3 +104,18 @@ void Principal::cargarContactos()
         archivo.close();
     }
 }
+
+void Principal::on_tblLista_cellClicked(int row)
+{
+    editpersona ep(this);
+    ep.setWindowTitle("Editar contacto");
+    int res = ep.exec();
+    if(res == QDialog::Rejected)
+        return;
+    Persona *n = ep.persona();
+    ui->tblLista->setItem(row,0,new QTableWidgetItem(n->nombre()));
+    ui->tblLista->setItem(row,1,new QTableWidgetItem(n->apellido()));
+    ui->tblLista->setItem(row,2,new QTableWidgetItem(n->telefono()));
+    ui->tblLista->setItem(row,3,new QTableWidgetItem(n->email()));
+}
+
